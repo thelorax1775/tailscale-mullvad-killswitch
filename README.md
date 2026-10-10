@@ -131,6 +131,18 @@ sudo systemctl daemon-reload
 sudo nft delete table inet mullvad_killswitch
 ```
 
+## Project status and related repos
+
+Stable, single-host setup. No changes since the initial release (June 2026).
+
+To roll this out to many Proxmox guests at once, see
+[tailscale-mullvad-bulk-deploy](https://github.com/thelorax1775/tailscale-mullvad-bulk-deploy).
+It vendors these files in its `assets/` directory, and its copies have since
+gained features this repo does not have: a `LAN_SUBNETS` bypass in
+`mullvad-rotate.sh`, so other LAN subnets stay reachable while an exit node is
+active, and templated `LAN`/country settings. If you want those features, use
+the files from that repo.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
